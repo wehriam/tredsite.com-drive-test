@@ -84,32 +84,6 @@ $(document).ready(function(){
   mixpanel.track(msg);
   _gaq.push(['_trackEvent', 'Page', msg]);
   var test_id = test_hash_code(0) % 4;
-  if(test_id < 2) {
-    $("#go").show();
-    var properties = {"Page Format":"Single 'Go' Button", "Button Layout": "Single Button"};
-    log(properties)
-    mixpanel.register_once(properties);
-    for(var key in properties) {
-      _gaq.push(['_setCustomVar', 1, 'Page', key, properties[key]]);
-    }
-  } else if(test_id === 2) {
-    $("#customize, #jump_to_price").show();
-    var properties = {"Page Format":"Dual Button, 'Customize' on Left", "Button Layout": "Dual Button"};
-    log(properties)
-    mixpanel.register_once(properties);
-    for(var key in properties) {
-      _gaq.push(['_setCustomVar', 1, 'Page', key, properties[key]]);
-    }
-  } else if(test_id === 3) {
-    $('#dual_buttons').prepend($('#dual_buttons').children().last());
-    $("#customize, #jump_to_price").show();
-    var properties = {"Page Format":"Dual Button, 'Jump to Price' on Left", "Button Layout": "Dual Button"};
-    log(properties)
-    mixpanel.register_once(properties);
-    for(var key in properties) {
-      _gaq.push(['_setCustomVar', 1, 'Page', key, properties[key]]);
-    }
-  }
   $(".slider_control").click(function(e){
     if($(this).text().indexOf("+") != -1) {
       var msg = "Use Property Search";

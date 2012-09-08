@@ -1,3 +1,15 @@
+.column {
+	float:left;
+	width:450px;
+	margin:10px;
+	padding:0;
+}
+.column h2 {
+	font-size:24px;
+}
+.column p {
+	font-size:16px;
+}
 @font-face {
 	font-family: 'FuturaMedium';
 	src: url('../fonts/futura-medium-webfont.eot');
@@ -189,7 +201,13 @@ body > footer .proper > ul > li + li {
 .login #header_form ul {
 	margin-left:30px;
 }
-
+#header_form h1 {
+	position:relative;
+	top:-20px;
+	font-weight:bold;
+	font-size:86px;
+	text-shadow:0px 2px 4px rgba(255, 255, 255, 1);
+}
 h1 img{
 	display:block;
 }
@@ -212,7 +230,6 @@ h1.replace{
 	left:0;
 }
 h1.replace span{
-	background:url('../images/hello.png') left top no-repeat;
 }
 
 button::-moz-focus-inner {
