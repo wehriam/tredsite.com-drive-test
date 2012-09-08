@@ -1,0 +1,345 @@
+<!doctype html>
+<html lang="en" class="no-js">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=9" />
+	<meta charset="utf-8" >
+	<title>Tred - Configure the Perfect Car</title>
+	<meta name="keywords" content="" >
+	<meta name="description" content="" >
+	<meta name="Robots" content="index,follow" >
+	<link href="media/css/main.css" rel="stylesheet" type="text/css" media="screen,projection" />
+	<link href="media/css/jquery.ui.all.css" rel="stylesheet" type="text/css" media="screen,projection" />
+	<link href="media/css/jquery.ui.selectmenu.css" rel="stylesheet" type="text/css" media="screen,projection" />
+	<link href="media/css/jquery.ui.slider.css" rel="stylesheet" type="text/css" media="screen,projection" />
+	<link href="media/css/jquery.ui.theme.css" rel="stylesheet" type="text/css" media="screen,projection" />
+	<link href="media/css/library.css" rel="stylesheet" type="text/css" media="screen,projection" />
+	<link href="media/css/layout.css" rel="stylesheet" type="text/css" media="screen,projection" />
+	<script src="media/js/modernizr-custom.min.js"></script>
+	<link rel="icon" type="image/png" href="media/images/favicon.ico"/>
+</head>
+<!--[if IE 7 ]>
+<body class="ie7 index">
+<![endif]-->
+<!--[if IE 8 ]>
+<body class="ie8 index">
+<![endif]-->
+<!--[if IE 9 ]>
+<body class="ie9 index">
+<![endif]-->
+<!--[if (gt IE 9)|!(IE)]>
+<!-->
+<body class="index">
+	<!--<![endif]-->
+	<div id="container">
+		<header>
+			<h1 class="reset">
+				<img src="media/images/logo.png" alt="tred">Alpha</h1>
+			<nav>
+				<ul class="reset">
+					<li>
+						<a href="index.html#">Sign Up</a>
+					</li>
+					<li>
+						<a href="users/login/index.html">Login</a>
+					</li>
+				</ul>
+				<ul class="reset">
+					<li>
+						<a href="about/why-tred/index.html">Why Tred</a>
+					</li>
+					<li>
+						<a href="about/how-it-works/index.html">How it Works</a>
+					</li>
+					<li>
+						<a href="#">Dealer Portal</a>
+					</li>
+				</ul>
+			</nav>
+		</header>
+		<div id="header_form" class="">
+			<h1 class="replace">
+				Hello perfect car
+				<span></span>
+			</h1>
+			<form action="/search" method="get">
+				<fieldset class='reset' id="primary_fieldset">
+					<ul class="reset" id="make_and_model">
+						<li class="make_li">
+							<select name="make" id="id_make">
+								<option value="" selected="selected">CHOOSE MAKE</option>
+							</select>
+						</li>
+						<li class="series_li">
+							<select name="series" id="id_series">
+								<option value="">CHOOSE MODEL</option>
+							</select>
+						</li>
+					</ul>
+					<fieldset class="hide details" id="search_details">
+						<input type="hidden" name="showDetails" id="showDetails" value="false" />
+						<fieldset class="body">
+							<p class="reset"></p>
+							<ul class="reset body_styles">
+								<li class="body_0">
+									<label for="body_0">
+										<input type="checkbox" class="replace" name="body" value="0" id="body_0" checked="checked" >
+										<span >all</span>
+									</label>
+								</li>
+								<li class="body_sedan">
+									<label for="body_SEDAN">
+										<input type="checkbox" class="replace" name="body" value="SEDAN" id="body_SEDAN"  >
+										<span style="background-image:url('media/uploads/sedan.png');" class="with_image">SEDAN</span>
+									</label>
+								</li>
+								<li class="body_convertible">
+									<label for="body_CONVERTIBLE">
+										<input type="checkbox" class="replace" name="body" value="CONVERTIBLE" id="body_CONVERTIBLE"  >
+										<span style="background-image:url('media/uploads/convertible.png');" class="with_image">CONVERTIBLE</span>
+									</label>
+								</li>
+								<li class="body_suv">
+									<label for="body_SUV">
+										<input type="checkbox" class="replace" name="body" value="SUV" id="body_SUV"  >
+										<span style="background-image:url('media/uploads/suv.png');" class="with_image">SUV</span>
+									</label>
+								</li>
+								<li class="body_hatchback">
+									<label for="body_HATCHBACK">
+										<input type="checkbox" class="replace" name="body" value="HATCHBACK" id="body_HATCHBACK"  >
+										<span style="background-image:url('media/uploads/hatchback.png');" class="with_image">HATCHBACK</span>
+									</label>
+								</li>
+								<li class="body_coupe">
+									<label for="body_COUPE">
+										<input type="checkbox" class="replace" name="body" value="COUPE" id="body_COUPE"  >
+										<span style="background-image:url('media/uploads/coupe.png');" class="with_image">COUPE</span>
+									</label>
+								</li>
+								<li class="body_wagon">
+									<label for="body_WAGON">
+										<input type="checkbox" class="replace" name="body" value="WAGON" id="body_WAGON"  >
+										<span style="background-image:url('media/uploads/wagon.png');" class="with_image">WAGON</span>
+									</label>
+								</li>
+							</ul>
+						</fieldset>
+						<fieldset class="others">
+							<ul class="reset">
+								<li class="prices">
+									<label>Price range</label>
+									<div class="hide">
+										<label for="id_price_lower">
+											<span>Price lower</span>
+											<input type="text" name="price_lower" id="id_price_lower" />
+										</label>
+										<label for="id_price_upper">
+											<span>Price upper</span>
+											<input type="text" name="price_upper" id="id_price_upper" />
+										</label>
+									</div>
+								</li>
+								<li>
+									<label for="id_mpg">MPGs</label>
+									<select name="mpg" id="id_mpg">
+										<option value="" selected="selected"></option>
+										<option value="&gt;20">More than 20 MPG</option>
+										<option value="&gt;30">More than 30 MPG</option>
+										<option value="&gt;40">More than 40 MPG</option>
+									</select>
+								</li>
+								<li>
+									<label for="id_fuel_type">Fuel type</label>
+									<select name="fuel_type" id="id_fuel_type">
+										<option value="" selected="selected"></option>
+										<option value="regular">regular</option>
+										<option value="hybrid">hybrid</option>
+										<option value="diesel">diesel</option>
+									</select>
+								</li>
+							</ul>
+						</fieldset>
+					</fieldset>
+					<br clear="both" />
+					<span id="dual_buttons">
+						<input type="submit" name="submit" id="customize" class="reset" value="CUSTOMIZE" style="display:none;"/>
+						<input type="submit" name="submit" id="jump_to_price" class="reset" value="JUMP TO PRICE" style="display:none;"/>
+					</span>
+					<input type="submit" name="submit" id="go" class="reset" value="GO" style="display:none;"/>
+				</fieldset>
+			</form>
+		</div>
+		<article class="boxes">
+			<h1>
+				<!--Build &amp; buy new car online-->
+			</h1>
+			<ul>
+				<li>
+					<h2>1. Customize</h2>
+				</li>
+				<li class="second">
+					<h2>2. Order</h2>
+				</li>
+				<li class="last">
+					<h2>3. Track</h2>
+				</li>
+			</ul>
+			<div class="bg">
+				<img src="media/images/picSteps2.png" alt="" />
+			</div>
+		</article>
+	</div>
+	<footer>
+		<div class="proper">
+			<nav>
+				<section>
+					<h1>Company Information</h1>
+					<ul class="reset">
+						<li>
+							<a href="about/index.html">About Us</a>
+						</li>
+						<li>
+							<a href="about/lightly/index.html">Tred Lightly</a>
+						</li>
+						<li>
+							<a href="about/press-careers/index.html">Press / Careers</a>
+						</li>
+					</ul>
+				</section>
+				<section>
+					<h1>Our Community</h1>
+					<ul class="reset">
+						<li>
+							<a href="http://blog.tredsite.com" class="blog">Blog</a>
+						</li>
+						<li>
+							<a class="facebook" href="http://facebook.com/tredsite" target="_blank">Facebook</a>
+						</li>
+						<li>
+							<a class="twitter" href="http://twitter.com/tredsite" target="_blank">Twitter</a>
+						</li>
+					</ul>
+				</section>
+				<section>
+					<h1>Customer Service</h1>
+					<ul class="reset">
+						<li>
+							<a href="about/faq/index.html">Help &amp; FAQ</a>
+						</li>
+						<li>
+							<a href="contact-us/index.html">Contact Us</a>
+						</li>
+						<li id="feedbackBtn">
+							<a href="index.html#feedback" id="feedback">
+								<img alt="Feedback" src="media/images/btnFeedback.png"/>
+							</a>
+						</li>
+					</ul>
+				</section>
+			</nav>
+			<p class="copyright">
+				<img src="media/images/footer_logo.png" alt="tred.">all rights reserved.</p>
+			<ul>
+				<li>
+					<a href="https://mixpanel.com/f/partner">
+						<img src="https://mixpanel.com/site_media/images/partner/badge_blue.png" alt="Mobile and Web Analytics" style="position:relative; top:-10px;"/>
+					</a>
+				</li>
+			</ul>
+			<ul>
+				<li>
+					<a href="#">Terms of Use</a>
+				</li>
+				<li>
+					<a href="#">Privacy Policy</a>
+				</li>
+				<li>
+					<a href="#">Site Map</a>
+				</li>
+			</ul>
+		</div>
+	</footer>
+	<div class="overlay hide">
+		<form action="/feedback/" method="post" id="feedback" class="overlayContent fo11">
+			<fieldset>
+				<legend>
+					<span class="h23">Feedback</span>
+				</legend>
+				<ul class="reset">
+					<li>
+						<label for="id_feedback-email">Email:</label>
+						<input id="id_feedback-email" type="text" name="feedback-email" maxlength="75" />
+					</li>
+					<li>
+						<label for="id_feedback-description">Description:</label>
+						<textarea id="id_feedback-description" rows="10" cols="40" name="feedback-description"></textarea>
+						<input type="hidden" name="feedback-url" value="http://demo.tredsite.com/" id="id_feedback-url" />
+					</li>
+				</ul>
+			</fieldset>
+			<div class="submit">
+				<div style='display:none'>
+					<input type='hidden' name='csrfmiddlewaretoken' value='9325e2028d576db7e505b09ea9d826be' />
+				</div>
+				<input type="submit" value="Send" title="Send" class="button third_level"/>
+			</div>
+		</form>
+		<div class="overlayContent hide">
+			<p>Thank you for your feedback</p>
+		</div>
+	</div>
+	<div id="modal_form" style="display:none;">
+		<div id="thanks" style="display:none;">Thanks, we'll be in touch!</div>
+		<form action="http://tred.createsend.com/t/j/s/wdudl/" method="post" id="inviteform">
+			<div>
+				<label for="wdudl-wdudl">
+					Sorry, we haven't started our engines yet!
+					<br />
+					Request an invite to our private beta:
+				</label>
+				<br />
+				<input type="text" name="cm-wdudl-wdudl" id="email" autocorrect="off" autocapitalize="off" data-initial="email@address.com"/>
+				<br />
+				<input type="submit" value="Subscribe" />
+			</div>
+		</form>
+	</div>
+	<script>
+		Settings = function(){};
+		Settings.prototype.series_url = "/get-series/";
+	</script>
+	<script type="text/javascript">
+	var _gaq = _gaq || [];
+	_gaq.push(['_setAccount', 'UA-32112885-4']);
+	_gaq.push(['_trackPageview']);
+	(function() { var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true; ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js'; var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s); })();
+	</script>
+	<script type="text/javascript" src="media/js/make_and_model.js" charset="utf-8"></script>
+	<script type="text/javascript" src="media/js/jquery-1.6.2.min.js" charset="utf-8"></script>
+	<script type="text/javascript" src="media/js/jquery.cookie.js" charset="utf-8"></script>
+	<script type="text/javascript" src="media/js/stub_console.js" charset="utf-8"></script>
+	<script type="text/javascript" src="media/js/html5.js" charset="utf-8"></script>
+	<script type="text/javascript" src="media/js/jquery.ui.core.js" charset="utf-8"></script>
+	<script type="text/javascript" src="media/js/jquery.ui.widget.js" charset="utf-8"></script>
+	<script type="text/javascript" src="media/js/jquery.ui.position.js" charset="utf-8"></script>
+	<script type="text/javascript" src="media/js/jquery.ui.mouse.js" charset="utf-8"></script>
+	<script type="text/javascript" src="media/js/jquery.ui.slider.js" charset="utf-8"></script>
+	<script type="text/javascript" src="media/js/jquery.ui.selectmenu.js" charset="utf-8"></script>
+	<script type="text/javascript" src="media/js/jquery.effects.core.js" charset="utf-8"></script>
+	<script type="text/javascript" src="media/js/jquery.effects.shake.js" charset="utf-8"></script>
+	<script type="text/javascript" src="media/js/library.js" charset="utf-8"></script>
+	<script type="text/javascript" src="media/js/jquery.simplemodal.js" charset="utf-8"></script>
+	<script type="text/javascript" src="media/js/jquery.example.js" charset="utf-8"></script>
+	<script type="text/javascript" src="media/js/jquery.tmpl.min.js" charset="utf-8"></script>
+	<script type="text/javascript" src="media/js/knockout-1.2.1.js" charset="utf-8"></script>
+	<script type="text/javascript" src="media/js/knockout.mapping-latest.js" charset="utf-8"></script>
+	<script type="text/javascript" src="media/js/jquery.number_format.js" charset="utf-8"></script>
+	<script type="text/javascript" src="media/js/search.js" charset="utf-8"></script>
+	<script type="text/javascript" src="media/js/site.js" charset="utf-8"></script>
+	<script type="text/javascript" src="media/js/testing.js" charset="utf-8"></script>
+	<!-- start Mixpanel -->
+	<script type="text/javascript">(function(d,c){var a,b,g,e;a=d.createElement("script");a.type="text/javascript";a.async=!0;a.src=("https:"===d.location.protocol?"https:":"http:")+'//api.mixpanel.com/site_media/js/api/mixpanel.2.js';b=d.getElementsByTagName("script")[0];b.parentNode.insertBefore(a,b);c._i=[];c.init=function(a,d,f){var b=c;"undefined"!==typeof f?b=c[f]=[]:f="mixpanel";g="disable track track_pageview track_links track_forms register register_once unregister identify name_tag set_config".split(" "); for(e=0;e<g.length;e++)(function(a){b[a]=function(){b.push([a].concat(Array.prototype.slice.call(arguments,0)))}})(g[e]);c._i.push([a,d,f])};window.mixpanel=c})(document,[]); mixpanel.init("c850a01257d91d3c9b60beb28bd36810");
+	</script>
+	<!-- end Mixpanel -->
+</body>
+</html>
